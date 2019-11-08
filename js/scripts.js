@@ -1,9 +1,9 @@
 //Back-End Logic//
-function Pizza(size, crust) {
+function Pizza(size, crust, toppings, dippingSauces) {
   this.size = size,
   this.crust = crust,
-  this.toppings = [],
-  this.dippingSauces = [],
+  this.toppings = toppings,
+  this.dippingSauces = dippingSauces,
   this.cost = 0
 }
 
@@ -29,17 +29,15 @@ Pizza.prototype.pizzaCost = function() {
   if (this.crust === 'new-york') {
     this.cost += 2;
   }
-  if (this.toppings.length > 0) {
-    this.toppings.forEach(function(topping) {
+  for (i = 0; i < this.toppings.length; i ++) {
       this.cost += 1;
-    });
   }
-  if (this.dippingSauces.length > 0) {
-    this.dippingSauces.forEach(function(dippingSauce) {
-      this.cost += .5;
-    });
+  for (i = 0; i < this.dippingSauces.length; i ++) {
+      this.cost += 1;
   }
-  return this.cost.fixed(2);
+  console.log(this.cost.toFixed(2));
+  return this.cost.toFixed(2);
+
 }
 
 //Front-End Logic//
@@ -49,8 +47,20 @@ $(document).ready(function() {
 
     var size = $('input[name=pizza-size]:checked').val();
     var crust = $('input[name=pizza-crust]:checked').val();
+    var toppings = $('input:checkbox[name=pizza-toppings]:checked').map(function() {
+      return this.value;
+    }) .get();
+    // });
+    var dippingSauces = $('input:checkbox[name=pizza-dipping-sauces]:checked').map(function() {
+      return this.value;
+    }) .get();
+    // });
+    console.log(size);
+    console.log(crust);
+    console.log(toppings);
+    console.log(dippingSauces);
 
-    var newOrder = new Pizza(size, crust);
-    newOrder.pizzaCost();
+    var newOrder = new Pizza(size, crust, toppings, dippingSauces);
+    var totalCost = newOrder.pizzaCost();
   });
 });
