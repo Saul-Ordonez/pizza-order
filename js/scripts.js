@@ -1,93 +1,40 @@
-function Pizza(size, crust, topping1, topping2, topping3, topping4, basePrice) {
+//Back-End Logic//
+function Pizza(size, crust, cost) {
   this.size = size,
   this.crust = crust,
   this.toppings = [],
-  this.cost = 12
+  this.doubleToppings = [],
+  this.cost = 0
 }
 
-Pizza.prototype.pizzaSize = function() {
+Pizza.prototype.orderCost = function() {
+  if (this.size === '10"') {
+    this.cost += 10;
+  }
   if (this.size === '14"') {
-    this.cost += 2;
+    this.cost += 12;
   }
   if (this.size === '18"') {
-    this.cost += 4;
+    this.cost += 14;
   }
   if (this.size === '24"') {
-    this.cost += 6;
+    this.cost += 16;
   }
-  return this.cost;
-}
-
-Pizza.prototype.pizzaCrust = function() {
-  if (this.crust === 'thinCrust') {
+  if (this.crust === 'thin-crust') {
     this.cost += 2;
   }
-  if (this.crust === 'deepDish') {
+  if (this.crust === 'deep-dish') {
     this.cost += 2;
   }
-  return this.cost;
-}
-
-Pizza.prototype.pizzaTopping1 = function() {
-  if (this.toppings === 'peperoni') {
-    this.cost += 1;
+  if (this.toppings.length > 0) {
+    this.toppings.forEach(function(topping) {
+      this.cost += 1;
+    });
   }
-  if (this.toppings === 'sausage') {
-    this.cost += 1;
-  }
-  if (this.toppings === 'olive') {
-    this.cost += 1;
-  }
-  if (this.toppings === 'jalapeño') {
-    this.cost += 1;
-  }
-  return this.cost;
-}
-
-Pizza.prototype.pizzaTopping2 = function() {
-  if (this.toppings === 'peperoni') {
-    this.cost += 1;
-  }
-  if (this.toppings === 'sausage') {
-    this.cost += 1;
-  }
-  if (this.toppings === 'olive') {
-    this.cost += 1;
-  }
-  if (this.toppings === 'jalapeño') {
-    this.cost += 1;
-  }
-  return this.cost;
-}
-
-Pizza.prototype.pizzaTopping3 = function() {
-  if (this.toppings === 'peperoni') {
-    this.cost += 1;
-  }
-  if (this.toppings === 'sausage') {
-    this.cost += 1;
-  }
-  if (this.toppings === 'olive') {
-    this.cost += 1;
-  }
-  if (this.toppings === 'jalapeño') {
-    this.cost += 1;
-  }
-  return this.cost;
-}
-
-Pizza.prototype.pizzaTopping4 = function() {
-  if (this.toppings === 'peperoni') {
-    this.cost += 1;
-  }
-  if (this.toppings === 'sausage') {
-    this.cost += 1;
-  }
-  if (this.toppings === 'olive') {
-    this.cost += 1;
-  }
-  if (this.toppings === 'jalapeño') {
-    this.cost += 1;
+  if (this.doubleToppings.length > 0) {
+    this.doubleToppings.forEach(function(doubleTopping) {
+      this.cost += 1;
+    });
   }
   return this.cost;
 }
