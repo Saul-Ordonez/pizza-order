@@ -3,7 +3,7 @@ function Pizza(size, crust, cost) {
   this.size = size,
   this.crust = crust,
   this.toppings = [],
-  this.doubleToppings = [],
+  this.dippingSauces = [],
   this.cost = 0
 }
 
@@ -31,10 +31,10 @@ Pizza.prototype.orderCost = function() {
       this.cost += 1;
     });
   }
-  if (this.doubleToppings.length > 0) {
-    this.doubleToppings.forEach(function(doubleTopping) {
-      this.cost += 1;
+  if (this.dippingSauces.length > 0) {
+    this.dippingSauces.forEach(function(dippingSauce) {
+      this.cost += .5;
     });
   }
-  return this.cost;
+  return this.cost.fixed(2);
 }
