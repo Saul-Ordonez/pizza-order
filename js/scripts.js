@@ -1,10 +1,7 @@
 function Pizza(size, crust, topping1, topping2, topping3, topping4, basePrice) {
   this.size = size,
   this.crust = crust,
-  this.topping1 = topping1,
-  this.topping2 = topping2,
-  this.topping3 = topping3,
-  this.topping4 = topping4
+  this.toppings = [],
   this.cost = 12
 }
 
@@ -32,64 +29,64 @@ Pizza.prototype.pizzaCrust = function() {
 }
 
 Pizza.prototype.pizzaTopping1 = function() {
-  if (this.topping1 === 'peperoni') {
+  if (this.toppings === 'peperoni') {
     this.cost += 1;
   }
-  if (this.topping1 === 'sausage') {
+  if (this.toppings === 'sausage') {
     this.cost += 1;
   }
-  if (this.topping1 === 'olive') {
+  if (this.toppings === 'olive') {
     this.cost += 1;
   }
-  if (this.topping1 === 'jalapeño') {
+  if (this.toppings === 'jalapeño') {
     this.cost += 1;
   }
   return this.cost;
 }
 
 Pizza.prototype.pizzaTopping2 = function() {
-  if (this.topping2 === 'peperoni') {
+  if (this.toppings === 'peperoni') {
     this.cost += 1;
   }
-  if (this.topping2 === 'sausage') {
+  if (this.toppings === 'sausage') {
     this.cost += 1;
   }
-  if (this.topping2 === 'olive') {
+  if (this.toppings === 'olive') {
     this.cost += 1;
   }
-  if (this.topping2 === 'jalapeño') {
+  if (this.toppings === 'jalapeño') {
     this.cost += 1;
   }
   return this.cost;
 }
 
 Pizza.prototype.pizzaTopping3 = function() {
-  if (this.topping3 === 'peperoni') {
+  if (this.toppings === 'peperoni') {
     this.cost += 1;
   }
-  if (this.topping3 === 'sausage') {
+  if (this.toppings === 'sausage') {
     this.cost += 1;
   }
-  if (this.topping3 === 'olive') {
+  if (this.toppings === 'olive') {
     this.cost += 1;
   }
-  if (this.topping3 === 'jalapeño') {
+  if (this.toppings === 'jalapeño') {
     this.cost += 1;
   }
   return this.cost;
 }
 
 Pizza.prototype.pizzaTopping4 = function() {
-  if (this.topping4 === 'peperoni') {
+  if (this.toppings === 'peperoni') {
     this.cost += 1;
   }
-  if (this.topping4 === 'sausage') {
+  if (this.toppings === 'sausage') {
     this.cost += 1;
   }
-  if (this.topping4 === 'olive') {
+  if (this.toppings === 'olive') {
     this.cost += 1;
   }
-  if (this.topping4 === 'jalapeño') {
+  if (this.toppings === 'jalapeño') {
     this.cost += 1;
   }
   return this.cost;
