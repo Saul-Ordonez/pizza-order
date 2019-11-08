@@ -20,6 +20,9 @@ Pizza.prototype.pizzaCost = function() {
   if (this.size === '24"') {
     this.cost += 16;
   }
+  if (this.crust === 'Original') {
+    this.cost += 0;
+  }
   if (this.crust === 'Thin Crust') {
     this.cost += 2;
   }
@@ -49,10 +52,10 @@ $(document).ready(function() {
     var crust = $('input[name=pizza-crust]:checked').val();
     var toppings = $('input:checkbox[name=pizza-toppings]:checked').map(function() {
       return this.value;
-    }) .get();
+    }).get();
     var dippingSauces = $('input:checkbox[name=pizza-dipping-sauces]:checked').map(function() {
       return this.value;
-    }) .get();
+    }).get();
 
     var newOrder = new Pizza(size, crust, toppings, dippingSauces);
     newOrder.pizzaCost();
@@ -67,8 +70,8 @@ $(document).ready(function() {
     $('#yourOrder').show();
   });
 
-  $('#breadstickButton').click(function(event) {
-    event.preventDefault();
-    
-  });
+  // $('#breadstickButton').click(function(event) {
+  //   event.preventDefault();
+  //
+  // });
 });
