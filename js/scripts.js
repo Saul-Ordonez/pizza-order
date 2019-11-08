@@ -20,13 +20,13 @@ Pizza.prototype.pizzaCost = function() {
   if (this.size === '24"') {
     this.cost += 16;
   }
-  if (this.crust === 'thin-crust') {
+  if (this.crust === 'Thin Crust') {
     this.cost += 2;
   }
-  if (this.crust === 'deep-dish') {
+  if (this.crust === 'Deep Dish') {
     this.cost += 2;
   }
-  if (this.crust === 'new-york') {
+  if (this.crust === 'New York') {
     this.cost += 2;
   }
   for (i = 0; i < this.toppings.length; i ++) {
@@ -59,11 +59,16 @@ $(document).ready(function() {
     $('#pizzaPrice').html(newOrder.cost);
     $('.totalPrice').show();
 
-    $('#showSize').html(newOrder.size);
-    $('#showCrust').html(newOrder.crust);
-    $('#showToppings').html(<li>newOrder.toppings</li>);
-    $('#showDippingsauces').html(<li>newOrder.dippingSauces</li>);
-    $('#showBreadsticks').html(newOrder.breadsticks);
+    $('#showSize').text(size);
+    $('#showCrust').text(crust);
+    $('#showToppings').text(newOrder.toppings);
+    $('#showDippingsauces').text(newOrder.dippingSauces);
+    $('#showBreadsticks').text(newOrder.breadsticks);
     $('#yourOrder').show();
+  });
+
+  $('#breadstickButton').click(function(event) {
+    event.preventDefault();
+    
   });
 });
