@@ -1,3 +1,11 @@
 .totalPrice {
   display: none;
 }
+
+#yourOrder {
+  display: none;
+}
+
+#breadstickButton {
+  margin-top: 65px;
+}

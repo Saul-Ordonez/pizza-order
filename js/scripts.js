@@ -58,5 +58,12 @@ $(document).ready(function() {
     newOrder.pizzaCost();
     $('#pizzaPrice').html(newOrder.cost);
     $('.totalPrice').show();
+
+    $('#showSize').html(newOrder.size);
+    $('#showCrust').html(newOrder.crust);
+    $('#showToppings').html(<li>newOrder.toppings</li>);
+    $('#showDippingsauces').html(<li>newOrder.dippingSauces</li>);
+    $('#showBreadsticks').html(newOrder.breadsticks);
+    $('#yourOrder').show();
   });
 });
