@@ -13,49 +13,71 @@
       <div class="jumbotron">
       <h1>Get Your Pizza Here!</h1>
       </div>
-      <div class="row">
-        <div class="col-md-5">
-          <div class="well">
-            <h3>Choose your size:</h3>
-            <input type="radio" name="pizza-size" value='10"'>10"<br>
-            <input type="radio" name="pizza-size" value='14"'>14"<br>
-            <input type="radio" name="pizza-size" value='18"'>18"<br>
-            <input type="radio" name="pizza-size" value='24"'>24"<br>
+      <form id="orderForm">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="well" id='size'>
+              <h3>Choose your size:</h3>
+              <input type="radio" name="pizza-size" value='10"'>10"<br>
+              <input type="radio" name="pizza-size" value='14"'>14"<br>
+              <input type="radio" name="pizza-size" value='18"'>18"<br>
+              <input type="radio" name="pizza-size" value='24"'>24"<br>
+            </div>
+          </div>
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-5">
+            <div class="well" id='crust'>
+              <h3>Choose your crust:</h3>
+              <input type="radio" name="pizza-crust" value="original">Original<br>
+              <input type="radio" name="pizza-crust" value="thin-crust">Thin Crust<br>
+              <input type="radio" name="pizza-crust" value="deep-dish">Deep Dish<br>
+              <input type="radio" name="pizza-crust" value="new-york">New York Style<br>
+            </div>
           </div>
         </div>
-        <div class="col-md-2">
+        <div class="row">
+          <div class="well" id='toppings'>
+            <h3>Pick any toppings:</h3>
+            <div class="col-md-4">
+              <input type="checkbox" name="pizza-toppings" value="Peperoni">Peperoni<br>
+              <input type="checkbox" name="pizza-toppings" value="Sausage">Sausage<br>
+              <input type="checkbox" name="pizza-toppings" value="Bacon">Bacon<br>
+              <input type="checkbox" name="pizza-toppings" value="Ham">Ham<br>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="pizza-toppings" value="Olives">Olives<br>
+              <input type="checkbox" name="pizza-toppings" value="Bell Peppers">Bell Peppers<br>
+              <input type="checkbox" name="pizza-toppings" value="Jalapeńos">Jalapeńos<br>
+              <input type="checkbox" name="pizza-toppings" value="Pineapple">Pineapple<br>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="pizza-toppings" value="Anchovies">Anchovies<br>
+              <input type="checkbox" name="pizza-toppings" value="Red Onion">Red Onion<br>
+              <input type="checkbox" name="pizza-toppings" value="Mushrooms">Mushrooms<br>
+              <input type="checkbox" name="pizza-toppings" value="Tomato">Tomato<br>
+            </div>
+          </div>
         </div>
-        <div class="col-md-5">
-          <h3>Choose your crust:</h3>
-          <input type="radio" name="pizza-crust" value="Original">Original<br>
-          <input type="radio" name="pizza-crust" value="Thin Crust">Thin Crust<br>
-          <input type="radio" name="pizza-crust" value="Deep Dish">Deep Dish<br>
-        </div>
-      </div>
-      <br>
-      <br>
-      <div class="row">
-        <div class="well">
-          <h3>Pick any toppings:</h3>
+        <div class="row">
           <div class="col-md-4">
-          <input type="checkbox" name="pizza-toppings" value="Peperoni">Peperoni<br>
-          <input type="checkbox" name="pizza-toppings" value="Sausage">Sausage<br>
-          <input type="checkbox" name="pizza-toppings" value="Bacon">Bacon<br>
-          <input type="checkbox" name="pizza-toppings" value="Ham">Ham<br>
+          <div class="well" id='dippingSauces'>
+              <h3>Dipping Sauces</h3>
+              <input type="checkbox" name="pizza-dipping-sauces" value="Ranch">Ranch<br>
+              <input type="checkbox" name="pizza-dipping-sauces" value="Blue Cheese">Blue Cheese<br>
+              <input type="checkbox" name="pizza-dipping-sauces" value="Butter garlic">Butter garlic<br>
+              <input type="checkbox" name="pizza-dipping-sauces" value="Marinara">Marinara<br>
+            </div>
           </div>
           <div class="col-md-4">
-          <input type="checkbox" name="pizza-toppings" value="Olives">Olives<br>
-          <input type="checkbox" name="pizza-toppings" value="Bell Peppers">Bell Peppers<br>
-          <input type="checkbox" name="pizza-toppings" value="Jalapeńos">Jalapeńos<br>
-          <input type="checkbox" name="pizza-toppings" value="Pineapple">Pineapple<br>
           </div>
           <div class="col-md-4">
-          <input type="checkbox" name="pizza-toppings" value="Anchovies">Anchovies<br>
-          <input type="checkbox" name="pizza-toppings" value="Red Onion">Red Onion<br>
-          <input type="checkbox" name="pizza-toppings" value="Mushrooms">Mushrooms<br>
-          <input type="checkbox" name="pizza-toppings" value="Tomato">Tomato<br>
+            <button type="button" name="button"><strong>Breadsticks?</strong><br>(just click the button)</button>
           </div>
         </div>
+      </form>
+      <div class="totalPrice">
+        <h2>Here is your total at checkout: $<span id='totalPrice'></span>. Enjoy your meal!</h2>
       </div>
     </div>
   </body>

@@ -1,5 +1,5 @@
 //Back-End Logic//
-function Pizza(size, crust, cost) {
+function Pizza(size, crust) {
   this.size = size,
   this.crust = crust,
   this.toppings = [],
@@ -7,7 +7,7 @@ function Pizza(size, crust, cost) {
   this.cost = 0
 }
 
-Pizza.prototype.orderCost = function() {
+Pizza.prototype.pizzaCost = function() {
   if (this.size === '10"') {
     this.cost += 10;
   }
@@ -26,6 +26,9 @@ Pizza.prototype.orderCost = function() {
   if (this.crust === 'deep-dish') {
     this.cost += 2;
   }
+  if (this.crust === 'new-york') {
+    this.cost += 2;
+  }
   if (this.toppings.length > 0) {
     this.toppings.forEach(function(topping) {
       this.cost += 1;
@@ -38,3 +41,12 @@ Pizza.prototype.orderCost = function() {
   }
   return this.cost.fixed(2);
 }
+
+//Front-End Logic//
+$(document).ready(function() {
+  $('form#orderForm').submit(function(event) {
+    event.preventDefault();
+
+    var
+  });
+});
