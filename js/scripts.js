@@ -50,17 +50,13 @@ $(document).ready(function() {
     var toppings = $('input:checkbox[name=pizza-toppings]:checked').map(function() {
       return this.value;
     }) .get();
-    // });
     var dippingSauces = $('input:checkbox[name=pizza-dipping-sauces]:checked').map(function() {
       return this.value;
     }) .get();
-    // });
-    console.log(size);
-    console.log(crust);
-    console.log(toppings);
-    console.log(dippingSauces);
 
     var newOrder = new Pizza(size, crust, toppings, dippingSauces);
-    var totalCost = newOrder.pizzaCost();
+    newOrder.pizzaCost();
+    $('#pizzaPrice').html(newOrder.cost);
+    $('.totalPrice').show();
   });
 });
