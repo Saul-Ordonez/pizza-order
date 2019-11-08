@@ -47,6 +47,10 @@ $(document).ready(function() {
   $('form#orderForm').submit(function(event) {
     event.preventDefault();
 
-    var
+    var size = $('input[name=pizza-size]:checked').val();
+    var crust = $('input[name=pizza-crust]:checked').val();
+
+    var newOrder = new Pizza(size, crust);
+    newOrder.pizzaCost();
   });
 });
