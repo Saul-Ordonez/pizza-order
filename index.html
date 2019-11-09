@@ -10,35 +10,39 @@
   </head>
   <body>
     <div class="container">
+      <br>
+      <br>
       <div class="jumbotron">
-      <h1>Get Your Pizza Here!</h1>
+        <span class='rainbow'><h1>Galactic Pie</h1></span>
+        <h3>Our delivery radius is the Milky Way</h3>
       </div>
       <form id="orderForm">
         <div class="row">
           <div class="col-md-5">
             <div class="well" id='size'>
-              <h3>Choose your size:</h3>
-              <input type="radio" name="pizza-size" value='10"'>10"<br>
-              <input type="radio" name="pizza-size" value='14"'>14"<br>
-              <input type="radio" name="pizza-size" value='18"'>18"<br>
-              <input type="radio" name="pizza-size" value='24"'>24"<br>
+              <h3 class='headerStyles'>Choose your size:</h3>
+              <input type="radio" name="pizza-size" value='10"'> 10"<br>
+              <input type="radio" name="pizza-size" value='14"'> 14"<br>
+              <input type="radio" name="pizza-size" value='18"'> 18"<br>
+              <input type="radio" name="pizza-size" value='24"'> 24"<br>
             </div>
           </div>
           <div class="col-md-2">
           </div>
           <div class="col-md-5">
             <div class="well" id='crust'>
-              <h3>Choose your crust:</h3>
-              <input type="radio" name="pizza-crust" value="Original">Original<br>
-              <input type="radio" name="pizza-crust" value="Thin Crust">Thin Crust<br>
-              <input type="radio" name="pizza-crust" value="Deep Dish">Deep Dish<br>
-              <input type="radio" name="pizza-crust" value="New York">New York Style<br>
+              <h3 class='headerStyles'>Choose your crust:</h3>
+              <input type="radio" name="pizza-crust" value="Original"> Original<br>
+              <input type="radio" name="pizza-crust" value="Thin Crust"> Thin Crust<br>
+              <input type="radio" name="pizza-crust" value="Deep Dish"> Deep Dish<br>
+              <input type="radio" name="pizza-crust" value="New York"> New York Style<br>
+              <link href="https://fonts.googleapis.com/css?family=Supermercado+One&display=swap" rel="stylesheet">
             </div>
           </div>
         </div>
         <div class="well" id='toppings'>
         <div class="row">
-            <h3>Pick any toppings:</h3>
+            <h3 class='headerStyles'>Pick any toppings:</h3>
             <div class="col-md-4">
               <input type="checkbox" name="pizza-toppings" value=" Pepperoni"> Pepperoni<br>
               <input type="checkbox" name="pizza-toppings" value=" Sausage"> Sausage<br>
@@ -62,7 +66,7 @@
         <div class="row">
           <div class="col-md-4">
             <div class="well" id='dippingSauces'>
-              <h3>Dipping Sauces</h3>
+              <h3 class='headerStyles'>Dipping Sauces</h3>
               <input type="checkbox" name="pizza-dipping-sauces" value=" Ranch"> Ranch<br>
               <input type="checkbox" name="pizza-dipping-sauces" value=" Blue Cheese"> Blue Cheese<br>
               <input type="checkbox" name="pizza-dipping-sauces" value=" Butter garlic"> Butter garlic<br>
@@ -71,7 +75,7 @@
           </div>
           <div class="col-md-4" id='buttonStyler'>
             <div class="submit">
-              <button type="submit" class='btn-success' name="button">Get your total</button>
+              <button type="submit" class='btn-success' name="button">Blast off!</button>
             </div>
             <!-- <button type="button" name="button" id='breadstickButton'><strong>Breadsticks?</strong><br>(just click the button)</button> -->
           </div>
@@ -86,7 +90,7 @@
         </div>
       </form>
       <div class="totalPrice">
-        <h2>Here is your total at checkout: $<span id='pizzaPrice'></span>. Enjoy your 'za!</h2>
+        <h2>This is what you owe us in Earth credits: $<span id='pizzaPrice'></span>. Enjoy your 'za!</h2>
       </div>
     </div>
   </body>

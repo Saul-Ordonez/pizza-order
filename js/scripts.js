@@ -52,7 +52,6 @@ Pizza.prototype.pizzaCost = function() {
   //   this.cost += 6;
   // }
   return this.cost.toFixed(2);
-
 }
 
 //Front-End Logic//
