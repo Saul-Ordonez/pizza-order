@@ -4,6 +4,7 @@ function Pizza(size, crust, toppings, dippingSauces) {
   this.crust = crust,
   this.toppings = toppings,
   this.dippingSauces = dippingSauces,
+  // this.breadsticks = 0,
   this.cost = 0
 }
 
@@ -38,7 +39,9 @@ Pizza.prototype.pizzaCost = function() {
   for (i = 0; i < this.dippingSauces.length; i ++) {
       this.cost += 1;
   }
-  console.log(this.cost.toFixed(2));
+  // if ('#breadstickButton' === 1) {
+  //   this.cost += 6;
+  // }
   return this.cost.toFixed(2);
 
 }
@@ -57,6 +60,7 @@ $(document).ready(function() {
       return this.value;
     }).get();
 
+
     var newOrder = new Pizza(size, crust, toppings, dippingSauces);
     newOrder.pizzaCost();
     $('#pizzaPrice').html(newOrder.cost);
@@ -66,7 +70,7 @@ $(document).ready(function() {
     $('#showCrust').text(crust);
     $('#showToppings').text(newOrder.toppings);
     $('#showDippingsauces').text(newOrder.dippingSauces);
-    $('#showBreadsticks').text(newOrder.breadsticks);
+    // $('#showBreadsticks').text(newOrder.breadsticks);
     $('#yourOrder').show();
   });
 
