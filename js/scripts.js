@@ -22,7 +22,7 @@ Pizza.prototype.pizzaCost = function() {
     this.cost += 16;
   }
   else {
-    alert('Please select a size');
+    alert('Please select a size').reset();
   }
   if (this.crust === 'Original') {
     this.cost += 0;
@@ -37,7 +37,7 @@ Pizza.prototype.pizzaCost = function() {
     this.cost += 2;
   }
   else {
-    alert('Please select a crust type');
+    alert('Please select a crust type').reset();
   }
   for (i = 0; i < this.toppings.length; i ++) {
       this.cost += 1;

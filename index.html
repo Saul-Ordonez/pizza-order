@@ -52,7 +52,7 @@
             <div class="col-md-4">
               <input type="checkbox" name="pizza-toppings" value=" Olives"> Olives<br>
               <input type="checkbox" name="pizza-toppings" value=" Bell Peppers"> Bell Peppers<br>
-              <input type="checkbox" name="pizza-toppings" value=" Jalapeńos"> Jalapeńos<br>
+              <input type="checkbox" name="pizza-toppings" value=" Jalapenos"> Jalapenos<br>
               <input type="checkbox" name="pizza-toppings" value=" Pineapple"> Pineapple<br>
             </div>
             <div class="col-md-4">
@@ -73,9 +73,9 @@
               <input type="checkbox" name="pizza-dipping-sauces" value=" Marinara"> Marinara<br>
             </div>
           </div>
-          <div class="col-md-4" id='buttonStyler'>
+          <div class="col-md-4">
             <div class="submit">
-              <button type="submit" class='btn-success' name="button">Blast off!</button>
+              <button type="submit" id='buttonStyler' class='btn-success' name="button">Blast off!</button>
             </div>
             <!-- <button type="button" name="button" id='breadstickButton'><strong>Breadsticks?</strong><br>(just click the button)</button> -->
           </div>
@@ -90,7 +90,9 @@
         </div>
       </form>
       <div class="totalPrice">
-        <h2>This is what you owe us in Earth credits: $<span id='pizzaPrice'></span>. Enjoy your 'za!</h2>
+        <div class="well">
+          <h2>This is what you owe us in Earth credits: $<span id='pizzaPrice'></span>. Enjoy your 'za!</h2>
+        </div>
       </div>
     </div>
   </body>
