@@ -16,6 +16,8 @@ body {
   background-attachment: fixed;
   background-size: cover;
   font-family: 'Supermercado One', cursive;
+  color: white;
+  text-shadow: 2px 2px black;
 }
 
 
@@ -26,7 +28,6 @@ body {
   color: white;
   text-shadow: 2px 2px black;
   font-size: 150%;
-  margin-left: 100px;
   background: rgb(2,0,36);
   background: radial-gradient(circle, rgba(2,0,36,1) 13%, rgba(35,0,68,1) 59%, rgba(15,0,128,1) 100%);
   border: none;
@@ -43,5 +44,16 @@ body {
 }
 
 .headerStyles {
+  text-align: center;
+}
+
+.well {
+  background-color: black;
+  border: none;
+}
+
+.well#submit {
+  background: none;
+  border: none;
   text-align: center;
 }
