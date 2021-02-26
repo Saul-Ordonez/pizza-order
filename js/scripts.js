@@ -1,10 +1,10 @@
 //Back-End Logic//
-function Pizza(size, crust, toppings, dippingSauces) {
+function Pizza(size, crust, toppings, dippingSauces, breadsticks) {
   this.size = size,
   this.crust = crust,
   this.toppings = toppings,
   this.dippingSauces = dippingSauces,
-  // this.breadsticks = 0,
+  this.breadsticks = breadsticks,
   this.cost = 0
 }
 
@@ -45,12 +45,12 @@ Pizza.prototype.pizzaCost = function() {
   for (i = 0; i < this.dippingSauces.length; i ++) {
       this.cost += 1;
   }
+  if (this.breadsticks === 'Duh') {
+    this.cost += 3;
+  }
   if (this.cost === 0) {
     alert('Please enter information to complete form');
   }
-  // if ('#breadstickButton' === 1) {
-  //   this.cost += 6;
-  // }
   return this.cost.toFixed(2);
 }
 
@@ -61,6 +61,7 @@ $(document).ready(function() {
 
     var size = $('input[name=pizza-size]:checked').val();
     var crust = $('input[name=pizza-crust]:checked').val();
+    var breadsticks = $('input[name=bread-sticks]:checked').val();
     var toppings = $('input:checkbox[name=pizza-toppings]:checked').map(function() {
       return this.value;
     }).get();
@@ -69,7 +70,7 @@ $(document).ready(function() {
     }).get();
 
 
-    var newOrder = new Pizza(size, crust, toppings, dippingSauces);
+    var newOrder = new Pizza(size, crust, toppings, dippingSauces, breadsticks);
     newOrder.pizzaCost();
     $('#pizzaPrice').html(newOrder.cost);
     if (newOrder.cost > 0) {
@@ -80,14 +81,9 @@ $(document).ready(function() {
     $('#showCrust').text(crust);
     $('#showToppings').text(newOrder.toppings);
     $('#showDippingsauces').text(newOrder.dippingSauces);
-    // $('#showBreadsticks').text(newOrder.breadsticks);
+    $('#showBreadsticks').text(newOrder.breadsticks);
     if (newOrder.cost > 0) {
       $('#yourOrder').show();
     }
   });
-
-  // $('#breadstickButton').click(function(event) {
-  //   event.preventDefault();
-  //
-  // });
 });
